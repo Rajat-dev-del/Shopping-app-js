@@ -1,7 +1,6 @@
 import { ENDPOINTS } from "./constants/apiEndpoints.js";
 import { showLoader } from "./utils.js";
-import './auth/signup.js';
-import './auth/login.js';
+
 
 document.addEventListener("DOMContentLoaded", async ()=>{
     loadProducts();
@@ -12,7 +11,7 @@ async function loadProducts() {
     const parentEl = document.querySelector("#product-list");
     showLoader(parentEl);
     try {
-        const res = await fetch(`${ENDPOINTS.PRODUCTS}?limit=10`);
+        const res = await fetch(`${ENDPOINTS.PRODUCTS}?limit=20`);
         const data = await res.json();
         console.log(data);
         parentEl.innerHTML = data.map(product => renderProducts(product)).join('');
@@ -28,7 +27,7 @@ function renderProducts(product){
           <div class="card h-100 shadow-sm">
             <img src="${product.image}" class="card-img-top p-3" style="height: 200px; object-fit: contain;">
             <div class="card-body">
-              <h6 class="card-title">${product.title.slice(0, 25)}...</h6>
+              <h6 class="card-title">${product.title.slice(0, 20)}...</h6>
               <p class="card-text fw-bold">$${product.price}</p>
               <button class="btn btn-primary w-100">View</button>
             </div>

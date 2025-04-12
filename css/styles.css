@@ -1,0 +1,121 @@
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #F7F4FA;
+  color: #1E1E2F;
+}
+
+.btn-primary {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #5a35a0;
+  border-color: #5a35a0;
+}
+
+.custom-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 0;
+}
+.custom-loader span {
+  width: 12px;
+  height: 12px;
+  background-color: #6C4AB6;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite ease-in-out;
+}
+.custom-loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.custom-loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+header {
+  background-color: #4A3F6D;
+}
+header .navbar {
+  padding: 1rem 0;
+}
+header .navbar .navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header .navbar .navbar-brand .logo {
+  max-width: 100px;
+}
+header .navbar .nav-link {
+  color: #ffffff;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+header .navbar .nav-link:hover {
+  color: #B892FF;
+}
+header .navbar .navbar-toggler {
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #4A3F6D;
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+footer .logo {
+  max-width: 100px;
+}
+footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+footer .footer-container .footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #B892FF;
+}
+footer .footer-container .footer-links {
+  margin-bottom: 1rem;
+}
+footer .footer-container .footer-links a {
+  color: #ffffff;
+  margin: 0 0.75rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .footer-container .footer-links a:hover {
+  color: #B892FF;
+}
+footer .footer-container .footer-copy {
+  font-size: 0.875rem;
+  color: #E5D9F2;
+}

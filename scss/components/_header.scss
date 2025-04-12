@@ -1,0 +1,33 @@
+@use '../base/variables' as *;
+
+header {
+  background-color: $color-footer;
+
+  .navbar {
+    padding: 1rem 0;
+
+    .navbar-brand {
+      color: $color-light-text;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      .logo {
+        max-width: 100px;
+      }
+    }
+
+    .nav-link {
+      color: $color-light-text;
+      margin-left: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    .navbar-toggler {
+      background-color: $color-light-text;
+    }
+  }
+}
